@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfchat="clr-namespace:Syncfusion.XForms.Chat;assembly=Syncfusion.SfChat.XForms"
+             xmlns:local="clr-namespace:GettingStarted"
+             x:Class="GettingStarted.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ImageMessageViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <sfchat:SfChat x:Name="sfChat" 
+                       StickyTimeBreak="False"
+                       MessageShape="DualTearDrop"
+                       ShowOutgoingMessageAvatar="True"
+                       ShowIncomingMessageAvatar="True"
+                       Messages="{Binding Messages}"
+                       ImageTappedCommand="{Binding ImageCommand}"
+                       CurrentUser="{Binding CurrentUser}"
+                       IncomingMessageTimestampFormat="hh:mm tt"
+                       ShowAttachmentButton="True"
+                       AttachmentButtonCommand="{Binding AttachmentCommand}"
+                       AttachmentButtonCommandParameter="{x:Reference sfChat}"
+                       OutgoingMessageTimestampFormat="hh:mm tt" >
+        </sfchat:SfChat>
+    </ContentPage.Content>
+
+</ContentPage>
+

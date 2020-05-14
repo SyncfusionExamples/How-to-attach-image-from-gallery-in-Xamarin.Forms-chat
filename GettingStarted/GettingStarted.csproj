@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Audio.png" />
+    <None Remove="bird.gif" />
+    <None Remove="Contact.png" />
+    <None Remove="Document.png" />
+    <None Remove="Gallery.png" />
+    <None Remove="Location.png" />
+    <None Remove="Payment.png" />
+    <None Remove="People_Circle2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Audio.png" />
+    <EmbeddedResource Include="bird.gif" />
+    <EmbeddedResource Include="Contact.png" />
+    <EmbeddedResource Include="Document.png" />
+    <EmbeddedResource Include="Gallery.png" />
+    <EmbeddedResource Include="Location.png" />
+    <EmbeddedResource Include="Payment.png" />
+    <EmbeddedResource Include="People_Circle2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.SfChat" Version="18.1.0.52" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="18.1.0.52" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="View\AttachmentPopupView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

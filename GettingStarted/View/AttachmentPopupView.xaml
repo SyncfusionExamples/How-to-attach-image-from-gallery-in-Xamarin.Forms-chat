@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:CustomGrid xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GettingStarted"
+             x:Class="GettingStarted.AttachmentPopupView"
+                  BackgroundColor="White"
+                  RowSpacing="10"
+                  ColumnSpacing="10">
+    
+    <local:CustomGrid.RowDefinitions>
+        <RowDefinition Height="*"></RowDefinition>
+        <RowDefinition Height="*"></RowDefinition>
+    </local:CustomGrid.RowDefinitions>
+
+    <local:CustomGrid.ColumnDefinitions>
+        <ColumnDefinition Width="*"></ColumnDefinition>
+        <ColumnDefinition Width="*"></ColumnDefinition>
+        <ColumnDefinition Width="*"></ColumnDefinition>
+    </local:CustomGrid.ColumnDefinitions>
+
+    <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0" Spacing="0">
+        <Image x:Name="icon1" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" VerticalOptions="FillAndExpand" HeightRequest="30"></Image>
+        <Label x:Name="label1" Text="Document" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+    </StackLayout>
+
+    <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" Spacing="0">
+        <Image x:Name="icon2" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" VerticalOptions="FillAndExpand" HeightRequest="30"></Image>
+        <Label x:Name="label2" Text="Payment" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+    </StackLayout>
+
+    <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="2" Spacing="0">
+        <Image x:Name="icon3" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" VerticalOptions="FillAndExpand" HeightRequest="30"></Image>
+        <Label x:Name="label3" Text="Gallery" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+        <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer
+                Tapped="OpenGalleryTapped"
+                NumberOfTapsRequired="1" />
+        </StackLayout.GestureRecognizers>
+    </StackLayout>
+
+    <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="0" Spacing="0">
+        <Image x:Name="icon4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="30"></Image>
+        <Label x:Name="label4" Text="Audio" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+    </StackLayout>
+
+    <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1" Spacing="0">
+        <Image x:Name="icon5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="30"></Image>
+        <Label x:Name="label5" Text="Location" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+    </StackLayout>
+
+    <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="2" Spacing="0">
+        <Image x:Name="icon6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="30"></Image>
+        <Label x:Name="label6" Text="Contact" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+    </StackLayout>
+
+</local:CustomGrid>
